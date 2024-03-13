@@ -10,7 +10,7 @@ spec:
         # The GitHub organization or user.
         owner: danduus #e.g. eficode-academy
         # The Github repository
-        repo: https://github.com/danduus/argocd-katas #e.g. argocd-katas
+        repo: argocd-katas #e.g. argocd-katas
         tokenRef: # your github token
           secretName: student-3-github-token # the name of the secret that contains your github token
           key: token # the key in the secret that contains your github token
