@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bootstrap-student-3
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: student-3
+  project: default
+  source:
+    repoURL: https://github.com/danduus/argocd-katas
+    targetRevision: HEAD
+    path: apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
